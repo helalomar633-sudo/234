@@ -7,54 +7,57 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
-        .gold-text { color: #D4AF37; }
-        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
-        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; border-color: #D4AF37; }
+        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; background-color: #f8fafc; }
+        .blue-text { color: #1e40af; }
+        .blue-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; border-color: #3b82f6; }
+        
+        /* إخفاء الأقسام افتراضياً */
+        section { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
+        /* القسم النشط */
+        section.active { display: block; opacity: 1; }
     </style>
 </head>
-<body class="bg-[#0a0a0a] text-white">
+<body class="bg-slate-50 text-slate-800">
 
-    <nav class="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-gray-800 p-4">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-blue-100 p-4 shadow-sm">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-2xl font-black tracking-tighter">
-                <span class="gold-text">OM</span> ZONE <span class="text-sm font-light text-gray-400">ACADEMY</span>
+                <span class="blue-text">OM</span> ZONE <span class="text-sm font-light text-slate-400">ACADEMY</span>
             </div>
             <ul class="hidden md:flex gap-8 font-bold text-sm">
-                <li><a href="#home" class="hover:text-[#D4AF37] transition">الرئيسية</a></li>
-                <li><a href="#about" class="hover:text-[#D4AF37] transition">نبذة عنا</a></li>
-                <li><a href="#courses" class="hover:text-[#D4AF37] transition">الكورسات</a></li>
-                <li><a href="#curriculum" class="hover:text-[#D4AF37] transition">المنهج</a></li>
-                <li><a href="#apply" class="hover:text-[#D4AF37] transition">التقديم</a></li>
-                <li><a href="#contact" class="hover:text-[#D4AF37] transition">اتصل بنا</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('home')" class="nav-link hover:text-blue-600 transition text-blue-900">الرئيسية</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('about')" class="nav-link hover:text-blue-600 transition">نبذة عنا</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('courses')" class="nav-link hover:text-blue-600 transition">الأنشطة</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('apply')" class="nav-link hover:text-blue-600 transition">التقديم</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('contact')" class="nav-link hover:text-blue-600 transition">اتصل بنا</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"></div>
+    <section id="home" class="active min-h-[90vh] flex items-center justify-center text-center px-4">
         <div class="relative z-10">
-            <h1 class="text-5xl md:text-7xl font-black mb-6">تعليم <span class="gold-text">بمعايير عالمية</span></h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">مدرسة تهدف لخلق بيئة تعليمية تكنولوجية متطورة تليق بمستقبل أطفالنا.</p>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 text-slate-900">تعليم <span class="blue-text">بمعايير عالمية</span></h1>
+            <p class="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto mb-10">مدرسة تهدف لخلق بيئة تعليمية تكنولوجية متطورة تليق بمستقبل أطفالنا بنظام ذكي ومتطور.</p>
             <div class="flex gap-4 justify-center">
-                <a href="#apply" class="gold-bg text-black px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_#D4AF37] transition">سجل الآن</a>
-                <a href="#about" class="border border-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition">اكتشف المزيد</a>
+                <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-blue-200 transition">سجل الآن</button>
+                <button onclick="showSection('about')" class="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition">اكتشف المزيد</button>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-[#111]">
+    <section id="about" class="py-24">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1523050335392-93851179ae22?auto=format&fit=crop&q=80" alt="About School">
+            <div class="rounded-2xl overflow-hidden border border-blue-100 shadow-xl">
+                <img src="https://images.unsplash.com/photo-1523050335392-93851179ae22?auto=format&fit=crop&q=80" alt="About School" class="w-full">
             </div>
             <div>
-                <h2 class="text-4xl font-bold mb-6">قصتنا في <span class="gold-text">سطور</span></h2>
-                <p class="text-gray-400 leading-relaxed mb-6">تأسست مدرستنا لتكون منارة للعلم والإبداع في المرحلة الابتدائية. نحن لا نكتفي بتدريس المناهج التقليدية، بل نركز على بناء الشخصية، التفكير النقدي، والمهارات التقنية منذ الصغر.</p>
+                <h2 class="text-4xl font-bold mb-6 text-slate-900">قصتنا في <span class="blue-text">سطور</span></h2>
+                <p class="text-slate-600 leading-relaxed mb-6">تأسست مدرستنا لتكون منارة للعلم والإبداع. نحن ندمج التكنولوجيا بالتعليم التقليدي لخلق جيل مبدع قادر على مواجهة تحديات المستقبل.</p>
                 <ul class="space-y-4">
-                    <li class="flex items-center gap-3"><span class="gold-text">✔</span> كادر تعليمي متميز وأكاديمي</li>
-                    <li class="flex items-center gap-3"><span class="gold-text">✔</span> بيئة آمنة وذكية للطلاب</li>
-                    <li class="flex items-center gap-3"><span class="gold-text">✔</span> تركيز على اللغات والبرمجة</li>
+                    <li class="flex items-center gap-3 font-semibold"><span class="blue-text">✔</span> كادر تعليمي متميز وأكاديمي</li>
+                    <li class="flex items-center gap-3 font-semibold"><span class="blue-text">✔</span> بيئة آمنة وذكية للطلاب</li>
+                    <li class="flex items-center gap-3 font-semibold"><span class="blue-text">✔</span> تركيز على اللغات والبرمجة</li>
                 </ul>
             </div>
         </div>
@@ -62,69 +65,99 @@
 
     <section id="courses" class="py-24">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16 underline decoration-[#D4AF37] underline-offset-8">الأنشطة المتميزة</h2>
+            <h2 class="text-4xl font-bold mb-16 text-slate-900">الأنشطة <span class="blue-text">المتميزة</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#111] p-8 rounded-3xl border border-gray-800 card-hover">
-                    <div class="text-5xl mb-6">💻</div>
-                    <h3 class="text-xl font-bold mb-4">أساسيات البرمجة</h3>
-                    <p class="text-gray-500">نعلم الأطفال كيف يفكرون منطقياً من خلال لغات برمجية مخصصة لأعمارهم.</p>
+                <div class="bg-white p-8 rounded-3xl border border-blue-50 shadow-sm card-hover">
+                    <div class="text-5xl mb-6 text-blue-500">💻</div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">أساسيات البرمجة</h3>
+                    <p class="text-slate-500">نعلم الأطفال كيف يفكرون منطقياً من خلال لغات برمجية مخصصة لأعمارهم.</p>
                 </div>
-                <div class="bg-[#111] p-8 rounded-3xl border border-gray-800 card-hover">
-                    <div class="text-5xl mb-6">🇬🇧</div>
-                    <h3 class="text-xl font-bold mb-4">اللغات الأجنبية</h3>
-                    <p class="text-gray-500">تركيز مكثف على المحادثة باللغة الإنجليزية لضمان الطلاقة من الصغر.</p>
+                <div class="bg-white p-8 rounded-3xl border border-blue-50 shadow-sm card-hover">
+                    <div class="text-5xl mb-6 text-blue-500">🇬🇧</div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">اللغات الأجنبية</h3>
+                    <p class="text-slate-500">تركيز مكثف على المحادثة باللغة الإنجليزية لضمان الطلاقة من الصغر.</p>
                 </div>
-                <div class="bg-[#111] p-8 rounded-3xl border border-gray-800 card-hover">
-                    <div class="text-5xl mb-6">🎨</div>
-                    <h3 class="text-xl font-bold mb-4">الفنون الرقمية</h3>
-                    <p class="text-gray-500">تعليم الرسم والتصميم الجرافيكي البسيط لتنمية الحس الإبداعي.</p>
+                <div class="bg-white p-8 rounded-3xl border border-blue-50 shadow-sm card-hover">
+                    <div class="text-5xl mb-6 text-blue-500">🎨</div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">الفنون الرقمية</h3>
+                    <p class="text-slate-500">تعليم الرسم والتصميم الجرافيكي البسيط لتنمية الحس الإبداعي.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="apply" class="py-24 bg-[#111]">
+    <section id="apply" class="py-24">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto bg-black p-10 rounded-3xl border border-[#D4AF37]/30">
-                <h2 class="text-3xl font-bold text-center mb-10">استمارة التقديم <span class="gold-text">الإلكتروني</span></h2>
+            <div class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-2xl border border-blue-50">
+                <h2 class="text-3xl font-bold text-center mb-10 text-slate-900">استمارة التقديم <span class="blue-text">الإلكتروني</span></h2>
                 <form class="grid md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="اسم الطالب كاملاً" class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
-                    <input type="number" placeholder="عمر الطالب" class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
-                    <input type="tel" placeholder="رقم هاتف ولي الأمر" class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
-                    <select class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
+                    <input type="text" placeholder="اسم الطالب كاملاً" class="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:border-blue-500 outline-none transition">
+                    <input type="number" placeholder="عمر الطالب" class="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:border-blue-500 outline-none transition">
+                    <input type="tel" placeholder="رقم هاتف ولي الأمر" class="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:border-blue-500 outline-none transition">
+                    <select class="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:border-blue-500 outline-none transition">
                         <option>اختر السنة الدراسية</option>
                         <option>الصف الأول الابتدائي</option>
                         <option>الصف الثاني الابتدائي</option>
                         <option>الصف الثالث الابتدائي</option>
                     </select>
-                    <button type="submit" class="md:col-span-2 gold-bg text-black font-bold p-4 rounded-xl">إرسال الطلب الآن</button>
+                    <button type="submit" class="md:col-span-2 blue-bg text-white font-bold p-4 rounded-xl shadow-lg">إرسال الطلب الآن</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-16 border-t border-gray-800">
+    <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <div class="grid md:grid-cols-3 gap-10 mb-12">
-                <div>
-                    <h4 class="gold-text font-bold mb-3 text-lg">الموقع</h4>
-                    <p class="text-gray-400">القاهرة، مدينة نصر، الشارع الرئيسي</p>
+            <h2 class="text-4xl font-bold mb-12 text-blue-900">تواصل معنا</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-6">
+                    <h4 class="blue-text font-bold mb-3 text-lg">الموقع</h4>
+                    <p class="text-slate-600 font-semibold">القاهرة، مدينة نصر، الشارع الرئيسي</p>
                 </div>
-                <div>
-                    <h4 class="gold-text font-bold mb-3 text-lg">تواصل مباشر</h4>
-                    <p class="text-gray-400">010XXXXXXXXX</p>
-                    <p class="text-gray-400">support@omzone.com</p>
+                <div class="p-6">
+                    <h4 class="blue-text font-bold mb-3 text-lg">تواصل مباشر</h4>
+                    <p class="text-slate-600 font-semibold">010XXXXXXXXX</p>
+                    <p class="text-slate-600">support@omzone.com</p>
                 </div>
-                <div>
-                    <h4 class="gold-text font-bold mb-3 text-lg">ساعات العمل</h4>
-                    <p class="text-gray-400">من الأحد إلى الخميس: 8ص - 3م</p>
+                <div class="p-6">
+                    <h4 class="blue-text font-bold mb-3 text-lg">ساعات العمل</h4>
+                    <p class="text-slate-600 font-semibold">من الأحد إلى الخميس: 8ص - 3م</p>
                 </div>
-            </div>
-            <div class="pt-8 border-t border-gray-900 text-sm text-gray-600 font-bold">
-                &copy; 2026 تم التطوير بواسطة Om Zone Executive System
             </div>
         </div>
+    </section>
+
+    <footer class="py-8 bg-slate-900 text-white text-center">
+        <div class="text-sm font-bold opacity-70">
+            &copy; 2026 تم التطوير بواسطة Om Zone Executive System
+        </div>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // إخفاء كل السكشنات
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // إظهار السكشن المطلوب فقط
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+
+            // العودة لأعلى الصفحة عند التغيير
+            window.scrollTo(0, 0);
+
+            // تحديث شكل اللينكات في الناف بار (اختياري)
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                link.classList.remove('text-blue-600', 'underline');
+                if(link.getAttribute('onclick').includes(sectionId)) {
+                    link.classList.add('text-blue-600');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
