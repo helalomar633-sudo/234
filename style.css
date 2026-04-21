@@ -62,19 +62,20 @@ header {
 }
 
 /* قسم الـ Hero */
-./* قسم الـ Hero */
+/* قسم الـ Hero */
 .hero {
-  height: 70vh;
-  /* تدرج أزرق شفاف ليظهر النص الأسود بوضوح */
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-              url('https://i.postimg.cc/pdLz0MyP/OIP-(7).jpg'); /* تم تغيير رابط الصورة هنا */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--text-main);
+    height: 70vh;
+    /* تدرج أزرق شفاف ليظهر النص الأسود بوضوح */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('https://i.postimg.cc/pdLz0MyP/OIP-(7).jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* لضمان عدم تكرار الصورة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-main);
 }
 .hero-content h1 {
     font-size: 3rem;
