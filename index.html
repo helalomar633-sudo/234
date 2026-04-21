@@ -11,26 +11,36 @@
         .blue-text { color: #1e40af; }
         .blue-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
         
-        /* تأثيرات الخلفية في الرئيسية */
         #home {
             background: linear-gradient(rgba(30, 64, 175, 0.7), rgba(15, 23, 42, 0.8)), 
                         url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            /* لضمان التوسط الكامل */
+            display: none; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; border-color: #3b82f6; }
         
-        /* إخفاء الأقسام بنظام الصفحة الواحدة الذكي */
+        /* إخفاء جميع الأقسام افتراضياً */
         section { 
             display: none; 
-            min-height: 100vh;
+            min-height: calc(100vh - 70px); /* طرح طول الناف بار */
             animation: fadeIn 0.6s ease-out;
         }
         
+        /* القسم النشط فقط هو الذي يظهر */
         section.active { 
             display: block; 
+        }
+
+        /* حالة خاصة للرئيسية لأنها تستخدم Flex */
+        #home.active {
+            display: flex;
         }
 
         @keyframes fadeIn {
@@ -61,8 +71,8 @@
         </div>
     </nav>
 
-    <section id="home" class="active flex items-center justify-center text-center px-4">
-        <div class="relative z-10 text-white">
+    <section id="home" class="active text-center px-4">
+        <div class="relative z-10 text-white flex flex-col items-center justify-center">
             <span class="bg-blue-600/30 text-blue-200 px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block backdrop-blur-sm">مستقبل مشرق ينتظرهم</span>
             <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">تعليم <span class="text-blue-400">بمعايير عالمية</span><br>في بيئة دافئة</h1>
             <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">نحن لا نقدم مجرد دروس، بل نبني شخصية طفلك في بيئة محفزة تجمع بين حنان البيت وتطور التكنولوجيا.</p>
@@ -169,20 +179,22 @@
 
     <script>
         function showSection(sectionId) {
-            // 1. إخفاء جميع الأقسام تماماً
+            // 1. إخفاء جميع الأقسام تماماً عن طريق إزالة class 'active'
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
                 section.classList.remove('active');
             });
 
-            // 2. إظهار القسم المختار فقط
+            // 2. إظهار القسم المطلوب فقط بإضافة class 'active'
             const activeSection = document.getElementById(sectionId);
-            activeSection.classList.add('active');
+            if(activeSection) {
+                activeSection.classList.add('active');
+            }
 
-            // 3. العودة للأعلى بسلاسة
+            // 3. الصعود لأعلى الصفحة بسلاسة عند التبديل
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // 4. تحديث روابط التنقل (اللون الأزرق تحت اللينك النشط)
+            // 4. تحديث شكل الروابط في القائمة العلوية
             const links = document.querySelectorAll('.nav-link');
             links.forEach(link => {
                 link.classList.remove('active-link');
