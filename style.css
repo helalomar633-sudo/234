@@ -62,26 +62,43 @@ header {
 }
 
 /* قسم الـ Hero */
-/* قسم الـ Hero */
 .hero {
     height: 70vh;
-    /* غيرنا الـ 0.7 إلى 0.3 عشان الصورة تظهر بوضوح أكتر */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                url('https://i.postimg.cc/pdLz0MyP/OIP-(7).jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* تم تغيير التظليل إلى 0.5 لتوازن أفضل بين وضوح الصورة وظهور النص */
+    /* وتم وضع رابط الصورة الجديد الخاص بك */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://i.postimg.cc/J4ghwwTm/OIP-(8).jpg'); 
+    
+    /* الإعدادات الأساسية لضمان عدم التبكسل */
+    background-size: cover; /* تجعل الصورة تغطي القسم بالكامل */
+    background-position: center; /* تتمركز الصورة في المنتصف */
+    background-repeat: no-repeat; /* تمنع تكرار الصورة */
+    
+    /* إعدادات إضافية لتحسين الجودة على الشاشات العالية الدقة */
+    image-rendering: -webkit-optimize-contrast; /* لتحسين التباين والحدة */
+    image-rendering: crisp-edges; /* محاولة للحفاظ على حواف حادة */
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* لو خليت الطبقة غامقة (سودة)، يفضل تخلي النص أبيض عشان يبان */
+    
+    /* لون النص أبيض ليتباين مع التظليل الغامق */
     color: white; 
 }
+
+/* تعديل لون العنوان داخل الـ Hero ليكون أبيض لكي يظهر */
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--text-main);
+    color: white; /* تم تغييرها من var(--text-main) إلى white */
+}
+
+/* في حال وجود نص وصفي p داخل hero-content */
+.hero-content p {
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .btn-primary {
@@ -95,6 +112,7 @@ header {
     font-weight: bold;
     transition: 0.3s;
     border: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
