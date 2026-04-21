@@ -104,78 +104,110 @@
             </div>
         </div>
     </section>
-
-   <section id="academics" class="py-5">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">البرامج الأكاديمية</h2>
+    <section id="academics" class="py-20 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-slate-900">البرامج <span class="blue-text">الأكاديمية</span></h2>
+            <p class="text-slate-600">مناهج تعليمية متطورة مصممة لبناء جيل من المبدعين</p>
+        </div>
         
-        <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <button class="nav-link active fw-bold px-4" data-bs-toggle="pill" data-bs-target="#tab1">LKG/UKG</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link fw-bold px-4" data-bs-toggle="pill" data-bs-target="#tab2">الصف الأول - الثالث</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link fw-bold px-4" data-bs-toggle="pill" data-bs-target="#tab3">الصف الرابع - الخامس</button>
-            </li>
-        </ul>
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button onclick="switchTab('tab1')" id="btn-tab1" class="tab-btn active px-8 py-3 rounded-full font-bold shadow-md transition-all border-2 border-blue-600">
+                LKG/UKG
+            </button>
+            <button onclick="switchTab('tab2')" id="btn-tab2" class="tab-btn px-8 py-3 rounded-full font-bold shadow-md transition-all border-2 border-transparent bg-white text-slate-600 hover:border-blue-600">
+                الصف الأول - الثالث
+            </button>
+            <button onclick="switchTab('tab3')" id="btn-tab3" class="tab-btn px-8 py-3 rounded-full font-bold shadow-md transition-all border-2 border-transparent bg-white text-slate-600 hover:border-blue-600">
+                الصف الرابع - الخامس
+            </button>
+        </div>
 
-        <div class="tab-content bg-white p-4 p-md-5 rounded shadow-sm border-top border-4 border-primary">
+        <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl border border-blue-50">
             
-            <div class="tab-pane fade show active" id="tab1">
-                <div class="row align-items-center">
-                    <div class="col-md-8 text-md-end">
-                        <div class="academy-icon mb-3"><i class="fas fa-palette fa-3x" style="color: var(--accent-color);"></i></div>
-                        <h3 class="fw-bold mb-3">برنامج التأسيس الإبداعي</h3>
-                        <p class="lead">نركز في هذه المرحلة على التعلم من خلال اللعب والاكتشاف. نهدف إلى تنمية مهارات الطفل الحركية والاجتماعية، مع تأسيس قوي في اللغة العربية والإنجليزية ومبادئ الحساب بأساليب تفاعلية.</p>
-                        <ul class="academy-list list-unstyled mb-4">
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> تنمية المهارات اللغوية والذكاء العاطفي.</li>
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> بيئة تعليمية مرحة وآمنة.</li>
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> أنشطة ترفيهية ورياضية يومية.</li>
+            <div id="content-tab1" class="tab-content-item">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-palette text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 text-slate-900">برنامج التأسيس الإبداعي</h3>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            "نركز في هذه المرحلة على التعلم من خلال اللعب والاكتشاف. نهدف إلى تنمية مهارات الطفل الحركية والاجتماعية، مع تأسيس قوي في اللغات بأساليب تفاعلية."
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> تنمية المهارات اللغوية والذكاء العاطفي.
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> بيئة تعليمية مرحة وآمنة تماماً.
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> أنشطة ترفيهية ورياضية يومية.
+                            </li>
                         </ul>
-                        <a href="#admissions" class="btn btn-register-small">سجل الآن في هذا البرنامج</a>
+                        <button onclick="showSection('apply')" class="blue-bg text-white px-8 py-3 rounded-xl font-bold hover:shadow-lg transition">سجل طفلك الآن</button>
                     </div>
-                    <div class="col-md-4 mt-4 mt-md-0 text-center">
-                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow" alt="Kindergarten">
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="Kindergarten">
                     </div>
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="tab2">
-                <div class="row align-items-center">
-                    <div class="col-md-8 text-md-end">
-                        <div class="academy-icon mb-3"><i class="fas fa-book-open fa-3x" style="color: var(--accent-color);"></i></div>
-                        <h3 class="fw-bold mb-3">مرحلة البناء المعرفي</h3>
-                        <p class="lead">نضع حجر الأساس للتميز الدراسي عبر منهج متكامل يركز على القراءة، الكتابة، والرياضيات. نستخدم تقنيات التعليم النشط لتعزيز الفضول العلمي لدى الطلاب.</p>
-                        <ul class="academy-list list-unstyled mb-4">
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> منهج لغوي مكثف (عربي/إنجليزي).</li>
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> مبادئ العلوم والحساب الذهني.</li>
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> استخدام الوسائل التقنية في التعليم.</li>
+            <div id="content-tab2" class="tab-content-item hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-book-open text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 text-slate-900">مرحلة البناء المعرفي</h3>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            نضع حجر الأساس للتميز الدراسي عبر منهج متكامل يركز على القراءة، الكتابة، والرياضيات باستخدام تقنيات التعليم النشط لتعزيز الفضول العلمي.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> منهج لغوي مكثف (عربي/إنجليزي).
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> مبادئ العلوم والحساب الذهني.
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> دمج الوسائل التقنية الحديثة.
+                            </li>
                         </ul>
-                        <a href="#admissions" class="btn btn-register-small">سجل الآن في هذا البرنامج</a>
+                        <button onclick="showSection('apply')" class="blue-bg text-white px-8 py-3 rounded-xl font-bold hover:shadow-lg transition">استفسر عن القبول</button>
                     </div>
-                    <div class="col-md-4 mt-4 mt-md-0 text-center">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow" alt="Primary School">
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="Primary School">
                     </div>
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="tab3">
-                <div class="row align-items-center">
-                    <div class="col-md-8 text-md-end">
-                        <div class="academy-icon mb-3"><i class="fas fa-microscope fa-3x" style="color: var(--accent-color);"></i></div>
-                        <h3 class="fw-bold mb-3">مرحلة التمكين والبحث العلمي</h3>
-                        <p class="lead">ننتقل بالطلاب من مرحلة التلقي إلى مرحلة البحث والتحليل. يتم تشجيع الطلاب على تنفيذ المشاريع العلمية، العمل الجماعي، وحل المشكلات المعقدة.</p>
-                        <ul class="academy-list list-unstyled mb-4">
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> تطوير مهارات البحث العلمي والعرض التقديمي.</li>
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> تعزيز القيم القيادية والاعتماد على النفس.</li>
-                            <li><i class="fas fa-check-circle text-primary me-2"></i> مسابقات أكاديمية وأنشطة تقنية متقدمة.</li>
+            <div id="content-tab3" class="tab-content-item hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-microscope text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 text-slate-900">مرحلة التمكين والبحث</h3>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            ننتقل بالطلاب من التلقي إلى البحث والتحليل، مع التركيز على المشاريع العلمية والعمل الجماعي وحل المشكلات المعقدة لبناء شخصية قيادية.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> تطوير مهارات البحث والعرض التقديمي.
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> تعزيز القيم القيادية والاعتماد على النفس.
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-500"></i> مسابقات أكاديمية وأنشطة برمجية.
+                            </li>
                         </ul>
-                        <a href="#admissions" class="btn btn-register-small">سجل الآن في هذا البرنامج</a>
+                        <button onclick="showSection('apply')" class="blue-bg text-white px-8 py-3 rounded-xl font-bold hover:shadow-lg transition">انضم إلينا</button>
                     </div>
-                    <div class="col-md-4 mt-4 mt-md-0 text-center">
-                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow" alt="Advanced Primary">
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="Advanced Primary">
                     </div>
                 </div>
             </div>
@@ -183,6 +215,28 @@
         </div>
     </div>
 </section>
+
+<script>
+    function switchTab(tabId) {
+        // إخفاء كل المحتوى
+        document.querySelectorAll('.tab-content-item').forEach(item => {
+            item.classList.add('hidden');
+        });
+        
+        // إظهار المحتوى المختار
+        document.getElementById('content-' + tabId).classList.remove('hidden');
+        
+        // تحديث شكل الأزرار
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+            btn.classList.add('bg-white', 'text-slate-600', 'border-transparent');
+        });
+        
+        const activeBtn = document.getElementById('btn-' + tabId);
+        activeBtn.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+        activeBtn.classList.remove('bg-white', 'text-slate-600', 'border-transparent');
+    }
+</script>
 
     <section id="apply" class="py-20 bg-white">
         <div class="container mx-auto px-6">
