@@ -238,79 +238,101 @@
     }
 </script>
 
-    <section id="apply" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">خطوات <span class="blue-text">القبول</span></h2>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-16 text-center">
-                <div class="p-8 bg-slate-50 rounded-2xl border-b-4 border-blue-600 shadow-sm">
-                    <i class="fas fa-edit text-3xl text-blue-600 mb-4"></i>
-                    <h4 class="font-bold">1. تعبئة النموذج</h4>
+   <section id="apply" style="background-color: #f8f9fa; display: block; padding: 80px 0;">
+    <div class="container">
+        <h2 class="section-title text-center" style="margin-bottom: 50px;">خطوات القبول والتسجيل</h2>
+        
+        <div class="row text-center mb-5">
+            <div class="col-md-4 mb-3">
+                <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4" style="border-color: var(--accent-color) !important;">
+                    <div class="step-number mb-3" style="font-size: 2rem; color: var(--navy-color); font-weight: bold;">01</div>
+                    <h5 class="fw-bold">تعبئة النموذج</h5>
+                    <p class="text-muted small">ابدأ بتعبئة طلب الالتحاق الإلكتروني ببيانات الطالب الأساسية.</p>
                 </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border-b-4 border-blue-600 shadow-sm">
-                    <i class="fas fa-users text-3xl text-blue-600 mb-4"></i>
-                    <h4 class="font-bold">2. المقابلة الشخصية</h4>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4" style="border-color: var(--primary-color) !important;">
+                    <div class="step-number mb-3" style="font-size: 2rem; color: var(--navy-color); font-weight: bold;">02</div>
+                    <h5 class="fw-bold">المقابلة الشخصية</h5>
+                    <p class="text-muted small">تحديد موعد لزيارة المدرسة وإجراء اختبارات تحديد المستوى.</p>
                 </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border-b-4 border-blue-600 shadow-sm">
-                    <i class="fas fa-file-import text-3xl text-blue-600 mb-4"></i>
-                    <h4 class="font-bold">3. تسليم المستندات</h4>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4" style="border-color: var(--navy-color) !important;">
+                    <div class="step-number mb-3" style="font-size: 2rem; color: var(--navy-color); font-weight: bold;">03</div>
+                    <h5 class="fw-bold">اعتماد القبول</h5>
+                    <p class="text-muted small">تسليم المستندات المطلوبة وسداد الرسوم لإتمام عملية التسجيل.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="card-header py-3" style="background-color: var(--navy-color); color: white;">
+                        <h5 class="mb-0 text-center"><i class="fas fa-money-check-alt me-2"></i> جدول الرسوم الدراسية</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="py-3">المرحلة الدراسية</th>
+                                    <th class="py-3">الرسوم السنوية</th>
+                                    <th class="py-3">ملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 fw-bold">تمهيدي (LKG/UKG)</td>
+                                    <td style="color: var(--navy-color);">0000 ريال</td>
+                                    <td class="small">تشمل الكتب والأنشطة</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 fw-bold">الابتدائي (1-3)</td>
+                                    <td style="color: var(--navy-color);">0000 ريال</td>
+                                    <td class="small">رسوم الزي منفصلة</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 fw-bold">الابتدائي (4-5)</td>
+                                    <td style="color: var(--navy-color);">0000 ريال</td>
+                                    <td class="small">حصص تقنية مكثفة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="overflow-hidden rounded-2xl shadow-lg border border-slate-100">
-                    <table class="w-full text-right">
-                        <thead class="bg-slate-900 text-white">
-                            <tr>
-                                <th class="p-4">المرحلة الدراسية</th>
-                                <th class="p-4">الرسوم السنوية</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-4 italic">رياض الأطفال</td><td class="p-4 font-bold">0000 ريال</td></tr>
-                            <tr class="bg-slate-50"><td class="p-4 italic">الابتدائي (1-3)</td><td class="p-4 font-bold">0000 ريال</td></tr>
-                            <tr><td class="p-4 italic">الابتدائي (4-5)</td><td class="p-4 font-bold">0000 ريال</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="bg-blue-50 p-8 rounded-3xl">
-                    <h5 class="text-xl font-bold mb-6 text-center">استفسار سريع عبر واتساب</h5>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="الاسم الكامل" class="w-full p-3 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 ring-blue-400">
-                        <input type="tel" placeholder="رقم الهاتف" class="w-full p-3 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 ring-blue-400">
-                        <button type="button" class="w-full bg-green-500 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-green-600 transition">
-                             إرسال الاستفسار <i class="fab fa-whatsapp"></i>
+            <div class="col-lg-5">
+                <div class="card p-4 shadow-sm border-0 rounded-4" style="border-top: 5px solid var(--accent-color) !important;">
+                    <h5 class="fw-bold mb-3" style="color: var(--navy-color);">استفسار سريع</h5>
+                    <p class="small text-muted mb-4">سجل بياناتك وسيتواصل معك قسم القبول في أقرب وقت.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">اسم ولي الأمر</label>
+                            <input type="text" class="form-control form-control-lg fs-6" placeholder="أدخل الاسم الكامل">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">رقم الجوال</label>
+                            <input type="tel" class="form-control form-control-lg fs-6" placeholder="05XXXXXXXX">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">المرحلة التعليمية</label>
+                            <select class="form-select form-select-lg fs-6">
+                                <option selected disabled>اختر المرحلة</option>
+                                <option>رياض الأطفال</option>
+                                <option>المرحلة الابتدائية</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-lg w-100 mt-2" style="background-color: #25d366; color: white; border-radius: 12px; font-weight: bold;">
+                             تواصل معنا واتساب <i class="fab fa-whatsapp ms-1"></i>
                         </button>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-slate-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16">نحن هنا <span class="text-blue-400">لأجلك</span></h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <div class="text-3xl">📍</div>
-                    <h4 class="text-xl font-bold">العنوان</h4>
-                    <p class="text-slate-400">القاهرة، مدينة نصر، المنطقة التعليمية</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-3xl">📞</div>
-                    <h4 class="text-xl font-bold">اتصال مباشر</h4>
-                    <p class="text-slate-400">010XXXXXXXXX<br>011XXXXXXXXX</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-3xl">✉️</div>
-                    <h4 class="text-xl font-bold">البريد الإلكتروني</h4>
-                    <p class="text-slate-400">info@omzone-edu.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    </div>
+</section>
     <footer class="py-6 bg-black text-white/50 text-center text-xs">
         &copy; 2026 تم التطوير بواسطة Om Zone Executive System | جميع الحقوق محفوظة
     </footer>
