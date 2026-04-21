@@ -3,52 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدرستنا الابتدائية | بيئة تعليمية دافئة</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>مدرسة Om Zone الابتدائية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; border-color: #D4AF37; }
+    </style>
 </head>
-<body>
+<body class="bg-[#0a0a0a] text-white">
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">منارة العلم</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">الرئيسية</a></li>
-                <li><a href="about.html">نبذة عنا</a></li>
-                <li><a href="academics.html">الأكاديميات</a></li>
-                <li><a href="apply.html">التقدم</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
+    <nav class="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter">
+                <span class="gold-text">OM</span> ZONE <span class="text-sm font-light text-gray-400">ACADEMY</span>
+            </div>
+            <ul class="hidden md:flex gap-8 font-bold text-sm">
+                <li><a href="#home" class="hover:text-[#D4AF37] transition">الرئيسية</a></li>
+                <li><a href="#about" class="hover:text-[#D4AF37] transition">نبذة عنا</a></li>
+                <li><a href="#courses" class="hover:text-[#D4AF37] transition">الكورسات</a></li>
+                <li><a href="#curriculum" class="hover:text-[#D4AF37] transition">المنهج</a></li>
+                <li><a href="#apply" class="hover:text-[#D4AF37] transition">التقديم</a></li>
+                <li><a href="#contact" class="hover:text-[#D4AF37] transition">اتصل بنا</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>مرحباً بكم في بيتنا الثاني</h1>
-            <p>حيث يبدأ الإبداع وتنمو العقول في بيئة تعليمية دافئة وآمنة.</p>
-            <a href="apply.html" class="btn-primary">سجل طفلك الآن</a>
         </div>
-    </section>
+    </nav>
 
-    <section class="features">
-        <div class="container">
-            <div class="card">
-                <h3>التعلم التفاعلي</h3>
-                <p>نستخدم أحدث الوسائل التكنولوجية لجعل التعليم رحلة ممتعة.</p>
-            </div>
-            <div class="card">
-                <h3>بيئة دافئة</h3>
-                <p>نحرص على بناء علاقة ودية بين المعلم والطالب كأنهم أسرة واحدة.</p>
-            </div>
-            <div class="card">
-                <h3>تطوير المواهب</h3>
-                <p>نركز على الرياضة، الفنون، والقيم الأخلاقية بجانب المنهج الدراسي.</p>
+    <section id="home" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"></div>
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-7xl font-black mb-6">تعليم <span class="gold-text">بمعايير عالمية</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">مدرسة تهدف لخلق بيئة تعليمية تكنولوجية متطورة تليق بمستقبل أطفالنا.</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#apply" class="gold-bg text-black px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_#D4AF37] transition">سجل الآن</a>
+                <a href="#about" class="border border-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition">اكتشف المزيد</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 - مدرسة منارة العلم الابتدائية</p>
+    <section id="about" class="py-24 bg-[#111]">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1523050335392-93851179ae22?auto=format&fit=crop&q=80" alt="About School">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-6">قصتنا في <span class="gold-text">سطور</span></h2>
+                <p class="text-gray-400 leading-relaxed mb-6">تأسست مدرستنا لتكون منارة للعلم والإبداع في المرحلة الابتدائية. نحن لا نكتفي بتدريس المناهج التقليدية، بل نركز على بناء الشخصية، التفكير النقدي، والمهارات التقنية منذ الصغر.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><span class="gold-text">✔</span> كادر تعليمي متميز وأكاديمي</li>
+                    <li class="flex items-center gap-3"><span class="gold-text">✔</span> بيئة آمنة وذكية للطلاب</li>
+                    <li class="flex items-center gap-3"><span class="gold-text">✔</span> تركيز على اللغات والبرمجة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16 underline decoration-[#D4AF37] underline-offset-8">الأنشطة المتميزة</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#111] p-8 rounded-3xl border border-gray-800 card-hover">
+                    <div class="text-5xl mb-6">💻</div>
+                    <h3 class="text-xl font-bold mb-4">أساسيات البرمجة</h3>
+                    <p class="text-gray-500">نعلم الأطفال كيف يفكرون منطقياً من خلال لغات برمجية مخصصة لأعمارهم.</p>
+                </div>
+                <div class="bg-[#111] p-8 rounded-3xl border border-gray-800 card-hover">
+                    <div class="text-5xl mb-6">🇬🇧</div>
+                    <h3 class="text-xl font-bold mb-4">اللغات الأجنبية</h3>
+                    <p class="text-gray-500">تركيز مكثف على المحادثة باللغة الإنجليزية لضمان الطلاقة من الصغر.</p>
+                </div>
+                <div class="bg-[#111] p-8 rounded-3xl border border-gray-800 card-hover">
+                    <div class="text-5xl mb-6">🎨</div>
+                    <h3 class="text-xl font-bold mb-4">الفنون الرقمية</h3>
+                    <p class="text-gray-500">تعليم الرسم والتصميم الجرافيكي البسيط لتنمية الحس الإبداعي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply" class="py-24 bg-[#111]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-black p-10 rounded-3xl border border-[#D4AF37]/30">
+                <h2 class="text-3xl font-bold text-center mb-10">استمارة التقديم <span class="gold-text">الإلكتروني</span></h2>
+                <form class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="اسم الطالب كاملاً" class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
+                    <input type="number" placeholder="عمر الطالب" class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
+                    <input type="tel" placeholder="رقم هاتف ولي الأمر" class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
+                    <select class="bg-[#111] border border-gray-800 p-4 rounded-xl focus:border-[#D4AF37] outline-none">
+                        <option>اختر السنة الدراسية</option>
+                        <option>الصف الأول الابتدائي</option>
+                        <option>الصف الثاني الابتدائي</option>
+                        <option>الصف الثالث الابتدائي</option>
+                    </select>
+                    <button type="submit" class="md:col-span-2 gold-bg text-black font-bold p-4 rounded-xl">إرسال الطلب الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <h4 class="gold-text font-bold mb-3 text-lg">الموقع</h4>
+                    <p class="text-gray-400">القاهرة، مدينة نصر، الشارع الرئيسي</p>
+                </div>
+                <div>
+                    <h4 class="gold-text font-bold mb-3 text-lg">تواصل مباشر</h4>
+                    <p class="text-gray-400">010XXXXXXXXX</p>
+                    <p class="text-gray-400">support@omzone.com</p>
+                </div>
+                <div>
+                    <h4 class="gold-text font-bold mb-3 text-lg">ساعات العمل</h4>
+                    <p class="text-gray-400">من الأحد إلى الخميس: 8ص - 3م</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-900 text-sm text-gray-600 font-bold">
+                &copy; 2026 تم التطوير بواسطة Om Zone Executive System
+            </div>
+        </div>
     </footer>
 
 </body>
