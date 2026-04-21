@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدرسة GT School</title>
+    <title>GT School Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,14 +24,12 @@
             justify-content: center;
         }
 
-        /* إخفاء جميع الأقسام افتراضياً */
         section { 
             display: none; 
             min-height: calc(100vh - 70px);
             animation: fadeIn 0.6s ease-out;
         }
         
-        /* القسم النشط فقط هو الذي يظهر */
         section.active { 
             display: block; 
         }
@@ -50,7 +48,6 @@
             border-bottom: 2px solid #2563eb;
         }
 
-        /* تنسيقات التابز المخصصة لتعويض بوتستراب */
         .tab-btn.active { background-color: #1e40af; color: white; }
     </style>
 </head>
@@ -62,35 +59,25 @@
                 <span class="blue-text">GT</span> SCHOOL <span class="text-sm font-light text-slate-400">ACADEMY</span>
             </div>
             <ul class="hidden md:flex gap-8 font-bold text-sm">
-                <li><a href="javascript:void(0)" onclick="showSection('home')" class="nav-link transition hover:text-blue-600 active-link" id="link-home">الرئيسية</a></li>
-                <li><a href="javascript:void(0)" onclick="showSection('about')" class="nav-link transition hover:text-blue-600" id="link-about">نبذة عنا</a></li>
-                <li><a href="javascript:void(0)" onclick="showSection('academics')" class="nav-link transition hover:text-blue-600" id="link-academics">البرامج الأكاديمية</a></li>
-                <li><a href="javascript:void(0)" onclick="showSection('apply')" class="nav-link transition hover:text-blue-600" id="link-apply">التقديم</a></li>
-                <li><a href="javascript:void(0)" onclick="showSection('contact')" class="nav-link transition hover:text-blue-600" id="link-contact">اتصل بنا</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('home')" class="nav-link transition hover:text-blue-600 active-link" id="link-home">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('about')" class="nav-link transition hover:text-blue-600" id="link-about">About Us</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('academics')" class="nav-link transition hover:text-blue-600" id="link-academics">Academics</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('apply')" class="nav-link transition hover:text-blue-600" id="link-apply">Admission</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('contact')" class="nav-link transition hover:text-blue-600" id="link-contact">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
    <section id="home" class="active text-center px-4">
-
         <div class="relative z-10 text-white flex flex-col items-center justify-center">
-
             <span class="bg-blue-600/30 text-blue-200 px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block backdrop-blur-sm">GT SCHOOL</span>
-
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">تعليم <span class="text-blue-400">بمعايير عالمية</span><br>في بيئة دافئة</h1>
-
-            <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">نحن لا نقدم مجرد دروس، بل نبني شخصية طفلك في بيئة محفزة تجمع بين حنان البيت وتطور التكنولوجيا.</p>
-
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">World-Class <span class="text-blue-400">Education</span><br>In a Warm Environment</h1>
+            <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">We don't just provide lessons; we build your child's personality in a motivating environment that combines home-like care with tech advancement.</p>
             <div class="flex flex-wrap gap-4 justify-center">
-
-                <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-xl">ابدأ رحلة طفلك</button>
-
-                <button onclick="showSection('about')" class="bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition">لماذا نحن؟</button>
-
+                <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-xl">Start Your Journey</button>
+                <button onclick="showSection('about')" class="bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition">Why Us?</button>
             </div>
-
         </div>
-
     </section>
 
  <section id="about" class="py-20 bg-white">
@@ -100,84 +87,84 @@
             </div>
             <div>                         
                 <h2 class="text-4xl font-bold mb-6 text-slate-900"> ABOUT <span class="blue-text"> GT SCHOOL </span></h2>
-                <p class="text-slate-600 leading-relaxed text-lg mb-6">مدرسة Om Zone ليست مجرد مبنى تعليمي، بل هي مجتمع متكامل يركز على الراحة النفسية للطفل كركيزة أساسية للتعلم. نحن نؤمن أن الطفل السعيد هو طفل مبدع.</p>
+                <p class="text-slate-600 leading-relaxed text-lg mb-6">GT School is more than just an educational building; it is an integrated community focusing on the child's psychological comfort as a fundamental pillar of learning. We believe a happy child is a creative child.</p>
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="p-4 bg-blue-50 rounded-2xl border-r-4 border-blue-600">
-                        <h4 class="font-bold text-blue-900">رؤيتنا</h4>
-                        <p class="text-sm text-slate-600">ريادة التعليم الرقمي في المنطقة.</p>
+                    <div class="p-4 bg-blue-50 rounded-2xl border-l-4 border-blue-600">
+                        <h4 class="font-bold text-blue-900">Our Vision</h4>
+                        <p class="text-sm text-slate-600">Leading digital education in the region.</p>
                     </div>
-                    <div class="p-4 bg-orange-50 rounded-2xl border-r-4 border-orange-400">
-                        <h4 class="font-bold text-orange-900">رسالتنا</h4>
-                        <p class="text-sm text-slate-600">بناء جيل واثق، مفكر، ومتصل.</p>
+                    <div class="p-4 bg-orange-50 rounded-2xl border-l-4 border-orange-400">
+                        <h4 class="font-bold text-orange-900">Our Mission</h4>
+                        <p class="text-sm text-slate-600">Building a confident, thinking, and connected generation.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
   <section id="academics" class="py-20 bg-slate-50">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4 text-slate-900">البرامج <span class="blue-text">الأكاديمية</span></h2>
-            <p class="text-slate-600 text-lg">مناهج دولية بمعايير حديثة تركز على مهارات القرن الحادي والعشرين</p>
+            <h2 class="text-4xl font-bold mb-4 text-slate-900">Academic <span class="blue-text">Programs</span></h2>
+            <p class="text-slate-600 text-lg">International curricula with modern standards focusing on 21st-century skills</p>
             <div class="mt-4 flex justify-center items-center gap-2 text-blue-600 font-semibold">
                 <i class="fas fa-certificate"></i>
-                <span>منهج معتمد دولياً وفق معايير STEM</span>
+                <span>Internationally Accredited STEM Standards</span>
             </div>
         </div>
         
         <div class="flex flex-wrap justify-center gap-4 mb-10">
             <button onclick="switchTab('tab1')" id="btn-tab1" class="tab-btn active px-8 py-3 rounded-full font-bold shadow-md transition-all border-2 border-blue-600">
-                مرحلة التمهيدي (LKG/UKG)
+                Preschool (LKG/UKG)
             </button>
             <button onclick="switchTab('tab2')" id="btn-tab2" class="tab-btn px-8 py-3 rounded-full font-bold shadow-md transition-all border-2 border-transparent bg-white text-slate-600 hover:border-blue-600">
-                الصفوف الأولى (1-3)
+                Lower Primary (1-3)
             </button>
             <button onclick="switchTab('tab3')" id="btn-tab3" class="tab-btn px-8 py-3 rounded-full font-bold shadow-md transition-all border-2 border-transparent bg-white text-slate-600 hover:border-blue-600">
-                الصفوف العليا (4-5)
+                Upper Primary (4-5)
             </button>
         </div>
 
         <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl border border-blue-50">
-            
             <div id="content-tab1" class="tab-content-item">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1">
+                    <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
                                 <i class="fas fa-baby text-2xl text-blue-600"></i>
                             </div>
-                            <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-bold">كثافة لا تزيد عن 15 طالب</span>
+                            <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-bold">Max 15 Students per Class</span>
                         </div>
-                        <h3 class="text-3xl font-black mb-4 text-slate-900">برنامج التأسيس الذكي</h3>
+                        <h3 class="text-3xl font-black mb-4 text-slate-900">Smart Foundation Program</h3>
                         <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                            تأسيس لغوي وعلمي متين يعتمد على <b>منهج Jolly Phonics</b> العالمي، مع دمج أنشطة منتسوري لتنمية الاستقلال الذاتي.
+                            Solid linguistic and scientific foundation using the global <b>Jolly Phonics</b> method, integrated with Montessori activities for self-independence.
                         </p>
                         
                         <div class="grid grid-cols-2 gap-4 mb-8">
-                            <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-blue-500">
-                                <h4 class="font-bold text-blue-900 mb-1">المواد الأساسية</h4>
-                                <p class="text-sm text-slate-600 text-right">English, Math, Arabic, Robotics</p>
+                            <div class="p-4 bg-slate-50 rounded-xl border-l-4 border-blue-500">
+                                <h4 class="font-bold text-blue-900 mb-1">Core Subjects</h4>
+                                <p class="text-sm text-slate-600">English, Math, Arabic, Robotics</p>
                             </div>
-                            <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-blue-500">
-                                <h4 class="font-bold text-blue-900 mb-1">نظام التقييم</h4>
-                                <p class="text-sm text-slate-600 text-right">تقارير مهارية أسبوعية للأهل</p>
+                            <div class="p-4 bg-slate-50 rounded-xl border-l-4 border-blue-500">
+                                <h4 class="font-bold text-blue-900 mb-1">Assessment</h4>
+                                <p class="text-sm text-slate-600">Weekly Skill Reports for Parents</p>
                             </div>
                         </div>
 
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-3 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-500"></i> 4 حصص لغة إنجليزية أسبوعياً (تأسيس صوتيات).
+                                <i class="fas fa-check-circle text-blue-500"></i> 4 English sessions per week (Phonics Focus).
                             </li>
                             <li class="flex items-center gap-3 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-500"></i> حصص "المكتشف الصغير" لتعلم مبادئ العلوم بالتجربة.
+                                <i class="fas fa-check-circle text-blue-500"></i> "Little Explorer" sessions for hands-on science.
                             </li>
                         </ul>
-                        <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-xl font-bold hover:shadow-lg transition transform hover:-translate-y-1">احجز مكان طفلك الآن (الأماكن محدودة)</button>
+                        <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-xl font-bold hover:shadow-lg transition transform hover:-translate-y-1">Book Your Spot (Limited)</button>
                     </div>
-                    <div class="order-1 md:order-2 relative">
-                        <img src="https://i.postimg.cc/L6w4xNM8/489.jpg" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="التعليم التفاعلي في مرحلة التمهيدي">
+                    <div class="relative">
+                        <img src="https://i.postimg.cc/L6w4xNM8/489.jpg" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="Interactive Learning">
                         <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl hidden md:block">
-                            <p class="text-blue-600 font-bold text-center">95%<br><span class="text-slate-500 text-xs">رضا أولياء الأمور</span></p>
+                            <p class="text-blue-600 font-bold text-center">95%<br><span class="text-slate-500 text-xs">Parent Satisfaction</span></p>
                         </div>
                     </div>
                 </div>
@@ -185,83 +172,50 @@
 
             <div id="content-tab2" class="tab-content-item hidden">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1">
+                    <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
                                 <i class="fas fa-code text-2xl text-blue-600"></i>
                             </div>
-                            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">تعليم البرمجة (Coding)</span>
+                            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Coding Education</span>
                         </div>
-                        <h3 class="text-3xl font-black mb-4 text-slate-900">برنامج المبدع الناشئ</h3>
+                        <h3 class="text-3xl font-black mb-4 text-slate-900">Young Innovator Program</h3>
                         <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                            نركز على "الحساب الذهني" والبرمجة الرسومية (Scratch) لبناء منطق رياضي قوي منذ الصغر، مع منهج لغوي مكثف.
+                            Focusing on "Mental Math" and visual coding (Scratch) to build strong mathematical logic from an early age.
                         </p>
-
-                        <div class="grid grid-cols-2 gap-4 mb-8">
-                            <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-blue-500">
-                                <h4 class="font-bold text-blue-900 mb-1">الجدول الدراسي</h4>
-                                <p class="text-sm text-slate-600 text-right">35 حصة أسبوعياً شاملة الأنشطة</p>
-                            </div>
-                            <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-blue-500">
-                                <h4 class="font-bold text-blue-900 mb-1">الميزة التنافسية</h4>
-                                <p class="text-sm text-slate-600 text-right">معمل لغات ومعمل حاسوب مخصص</p>
-                            </div>
-                        </div>
-
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-3 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-500"></i> حصص دورية في <b>الحساب الذهني (Abacus)</b> لتسريع الفهم.
+                                <i class="fas fa-check-circle text-blue-500"></i> <b>Abacus Mental Math</b> sessions for faster cognition.
                             </li>
                             <li class="flex items-center gap-3 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-500"></i> متابعة أسبوعية دقيقة عبر تطبيق المدرسة الخاص.
+                                <i class="fas fa-check-circle text-blue-500"></i> Precise tracking via School App.
                             </li>
                         </ul>
-                        <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-xl font-bold hover:shadow-lg transition transform hover:-translate-y-1">ابدأ مستقبل طفلك من هنا</button>
+                        <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-xl font-bold hover:shadow-lg transition">Join Future Creators</button>
                     </div>
-                    <div class="order-1 md:order-2">
-                     
-                        <img src="https://i.postimg.cc/SKzgWQf9/OIP-(5).jpg" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="أنشطة البحث العلمي والصفوف العليا">
+                    <div>
+                        <img src="https://i.postimg.cc/SKzgWQf9/OIP-(5).jpg" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="Innovation Lab">
                     </div>
                 </div>
             </div>
 
             <div id="content-tab3" class="tab-content-item hidden">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1">
+                    <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
                                 <i class="fas fa-rocket text-2xl text-blue-600"></i>
                             </div>
-                            <span class="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-bold">نظام التعليم القائم على المشاريع</span>
+                            <span class="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-bold">Project-Based Learning</span>
                         </div>
-                        <h3 class="text-3xl font-black mb-4 text-slate-900">برنامج القادة والعلماء</h3>
+                        <h3 class="text-3xl font-black mb-4 text-slate-900">Leaders & Scientists</h3>
                         <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                            إعداد الطلاب للمستقبل عبر تعلم أساسيات <b>الذكاء الاصطناعي (AI Basics)</b> والبحث العلمي التطبيقي في مجالات STEM.
+                            Preparing students for the future through <b>AI Basics</b> and applied scientific research in STEM fields.
                         </p>
-
-                        <div class="grid grid-cols-2 gap-4 mb-8">
-                            <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-blue-500">
-                                <h4 class="font-bold text-blue-900 mb-1">المواد المضافة</h4>
-                                <p class="text-sm text-slate-600 text-right">AI, Public Speaking, Research</p>
-                            </div>
-                            <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-blue-500">
-                                <h4 class="font-bold text-blue-900 mb-1">النتائج</h4>
-                                <p class="text-sm text-slate-600 text-right">مشروع تخرج علمي نهاية كل فصل</p>
-                            </div>
-                        </div>
-
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-500"></i> تنمية مهارات العرض والإلقاء (Public Speaking).
-                            </li>
-                            <li class="flex items-center gap-3 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-500"></i> تقارير أداء شهرية مفصلة (أكاديمياً وسلوكياً).
-                            </li>
-                        </ul>
-                        <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-xl font-bold hover:shadow-lg transition transform hover:-translate-y-1">انضم إلى جيل المبدعين</button>
+                        <button onclick="showSection('apply')" class="blue-bg text-white px-10 py-4 rounded-xl font-bold hover:shadow-lg transition">Enrol Now</button>
                     </div>
-                    <div class="order-1 md:order-2">
-                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="طلابنا في معمل البرمجة">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" class="rounded-[2rem] shadow-2xl border-4 border-white" alt="STEM Lab">
                     </div>
                 </div>
             </div>
@@ -270,56 +224,30 @@
     </div>
 </section>
 
-<script>
-    function switchTab(tabId) {
-        // إخفاء كل المحتوى
-        document.querySelectorAll('.tab-content-item').forEach(item => {
-            item.classList.add('hidden');
-        });
-        
-        // إظهار المحتوى المختار
-        document.getElementById('content-' + tabId).classList.remove('hidden');
-        
-        // تحديث شكل الأزرار
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
-            btn.classList.add('bg-white', 'text-slate-600', 'border-transparent');
-        });
-        
-        const activeBtn = document.getElementById('btn-' + tabId);
-        activeBtn.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
-        activeBtn.classList.remove('bg-white', 'text-slate-600', 'border-transparent');
-    }
-</script>
-
    <section id="apply" class="py-20 bg-slate-50">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 text-slate-900">خطوات <span class="blue-text">القبول والتسجيل</span></h2>
-            <p class="text-slate-600">رحلة انضمام طفلك إلينا تبدأ بخطوات بسيطة وواضحة</p>
+            <h2 class="text-4xl font-bold mb-4 text-slate-900">Admission <span class="blue-text">Process</span></h2>
+            <p class="text-slate-600">Your child's journey with us starts with simple steps</p>
         </div>
 
         <div class="relative max-w-5xl mx-auto mb-20">
             <div class="absolute top-1/2 left-0 w-full h-1 bg-slate-200 -translate-y-1/2 z-0 hidden md:block"></div>
-            <div class="absolute top-1/2 left-0 w-1/2 h-1 blue-bg -translate-y-1/2 z-0 hidden md:block transition-all duration-1000"></div>
-
             <div class="relative z-10 flex flex-col md:flex-row justify-between gap-10 md:gap-0">
                 <div class="flex flex-col items-center flex-1 group">
-                    <div class="w-14 h-14 rounded-full blue-bg text-white flex items-center justify-center font-bold text-xl shadow-lg border-4 border-white mb-4 group-hover:scale-110 transition">1</div>
-                    <h5 class="font-bold text-slate-900">تعبئة النموذج</h5>
-                    <p class="text-slate-500 text-sm text-center mt-2 max-w-[200px]">طلب الالتحاق الإلكتروني المبدئي</p>
+                    <div class="w-14 h-14 rounded-full blue-bg text-white flex items-center justify-center font-bold text-xl shadow-lg border-4 border-white mb-4">1</div>
+                    <h5 class="font-bold text-slate-900">Form Submission</h5>
+                    <p class="text-slate-500 text-sm text-center mt-2 max-w-[200px]">Initial Online Registration</p>
                 </div>
-
                 <div class="flex flex-col items-center flex-1 group">
-                    <div class="w-14 h-14 rounded-full blue-bg text-white flex items-center justify-center font-bold text-xl shadow-lg border-4 border-white mb-4 group-hover:scale-110 transition">2</div>
-                    <h5 class="font-bold text-slate-900">المقابلة الشخصية</h5>
-                    <p class="text-slate-500 text-sm text-center mt-2 max-w-[200px]">زيارة المدرسة واختبار المستوى</p>
+                    <div class="w-14 h-14 rounded-full blue-bg text-white flex items-center justify-center font-bold text-xl shadow-lg border-4 border-white mb-4">2</div>
+                    <h5 class="font-bold text-slate-900">Personal Interview</h5>
+                    <p class="text-slate-500 text-sm text-center mt-2 max-w-[200px]">School Visit & Assessment</p>
                 </div>
-
                 <div class="flex flex-col items-center flex-1 group">
-                    <div class="w-14 h-14 rounded-full bg-white text-slate-300 border-4 border-slate-200 flex items-center justify-center font-bold text-xl mb-4 group-hover:border-blue-400 transition">3</div>
-                    <h5 class="font-bold text-slate-400 group-hover:text-blue-600 transition">اعتماد القبول</h5>
-                    <p class="text-slate-500 text-sm text-center mt-2 max-w-[200px]">تسليم المستندات وسداد الرسوم</p>
+                    <div class="w-14 h-14 rounded-full bg-white text-slate-300 border-4 border-slate-200 flex items-center justify-center font-bold text-xl mb-4">3</div>
+                    <h5 class="font-bold text-slate-400">Final Admission</h5>
+                    <p class="text-slate-500 text-sm text-center mt-2 max-w-[200px]">Document Submission & Fees</p>
                 </div>
             </div>
         </div>
@@ -330,33 +258,33 @@
                     <div class="blue-bg p-6 text-white">
                         <h3 class="text-xl font-bold flex items-center gap-3">
                             <i class="fas fa-coins text-blue-200"></i>
-                            جدول الرسوم الدراسية
+                            Tuition Fees Schedule
                         </h3>
                     </div>
                     <div class="overflow-x-auto">
-                        <table class="w-full text-right">
+                        <table class="w-full text-left">
                             <thead>
                                 <tr class="bg-slate-50 text-slate-500 text-sm uppercase">
-                                    <th class="px-6 py-4 font-bold">المرحلة الدراسية</th>
-                                    <th class="px-6 py-4 font-bold">الرسوم السنوية</th>
-                                    <th class="px-6 py-4 font-bold">ملاحظات</th>
+                                    <th class="px-6 py-4 font-bold">Grade Level</th>
+                                    <th class="px-6 py-4 font-bold">Annual Fees</th>
+                                    <th class="px-6 py-4 font-bold">Notes</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100">
                                 <tr class="hover:bg-blue-50/50 transition">
-                                    <td class="px-6 py-5 font-bold text-slate-800 text-lg border-r-4 border-blue-600">تمهيدي LKG/UKG</td>
-                                    <td class="px-6 py-5 text-blue-600 font-black">15,000 ريال</td>
-                                    <td class="px-6 py-5 text-slate-500 text-sm">شاملة الكتب والأنشطة</td>
+                                    <td class="px-6 py-5 font-bold text-slate-800 border-l-4 border-blue-600">Preschool LKG/UKG</td>
+                                    <td class="px-6 py-5 text-blue-600 font-black">15,000 SAR</td>
+                                    <td class="px-6 py-5 text-slate-500 text-sm">Books & Activities Included</td>
                                 </tr>
                                 <tr class="hover:bg-blue-50/50 transition">
-                                    <td class="px-6 py-5 font-bold text-slate-800 text-lg border-r-4 border-blue-400">الابتدائي (1-3)</td>
-                                    <td class="px-6 py-5 text-blue-600 font-black">18,500 ريال</td>
-                                    <td class="px-6 py-5 text-slate-500 text-sm">الزي المدرسي منفصل</td>
+                                    <td class="px-6 py-5 font-bold text-slate-800 border-l-4 border-blue-400">Primary (1-3)</td>
+                                    <td class="px-6 py-5 text-blue-600 font-black">18,500 SAR</td>
+                                    <td class="px-6 py-5 text-slate-500 text-sm">Uniform Separate</td>
                                 </tr>
                                 <tr class="hover:bg-blue-50/50 transition">
-                                    <td class="px-6 py-5 font-bold text-slate-800 text-lg border-r-4 border-blue-200">الابتدائي (4-5)</td>
-                                    <td class="px-6 py-5 text-blue-600 font-black">20,000 ريال</td>
-                                    <td class="px-6 py-5 text-slate-500 text-sm">تشمل حصص التقنية</td>
+                                    <td class="px-6 py-5 font-bold text-slate-800 border-l-4 border-blue-200">Primary (4-5)</td>
+                                    <td class="px-6 py-5 text-blue-600 font-black">20,000 SAR</td>
+                                    <td class="px-6 py-5 text-slate-500 text-sm">Includes Tech Labs</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -366,29 +294,20 @@
 
             <div class="lg:col-span-5">
                 <div class="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-blue-600">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">استفسار سريع</h3>
-                    <p class="text-slate-500 mb-8">اترك بياناتك وسنتواصل معك خلال 24 ساعة</p>
-                    
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Quick Inquiry</h3>
+                    <p class="text-slate-500 mb-8">Leave your details and we'll contact you within 24h</p>
                     <form class="space-y-5">
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">اسم ولي الأمر</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition" placeholder="الاسم الكامل">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Parent Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 outline-none" placeholder="Full Name">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">رقم الجوال</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition text-left" placeholder="05XXXXXXXX">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 outline-none" placeholder="+966XXXXXXXXX">
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">المرحلة المهتم بها</label>
-                            <select class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 outline-none transition cursor-pointer">
-                                <option disabled selected>اختر المرحلة</option>
-                                <option>رياض الأطفال</option>
-                                <option>المرحلة الابتدائية</option>
-                            </select>
-                        </div>
-                        <button type="button" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02]">
+                        <button type="button" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-3 transition">
                             <i class="fab fa-whatsapp text-2xl"></i>
-                            تواصل معنا عبر واتساب
+                            Contact via WhatsApp
                         </button>
                     </form>
                 </div>
@@ -396,63 +315,54 @@
         </div>
     </div>
 </section>
- <section id="contact" class="py-20 bg-[#0f172a]"> <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 text-white">تواصل <span class="text-blue-400">معنا</span></h2>
-            <p class="text-slate-400">نحن هنا للإجابة على استفساراتكم ومساعدتكم في أي وقت</p>
-        </div>
 
+ <section id="contact" class="py-20 bg-[#0f172a]"> 
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4 text-white">Contact <span class="text-blue-400">Us</span></h2>
+            <p class="text-slate-400">We are here to answer your questions at any time</p>
+        </div>
         <div class="grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-8 rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 blue-bg text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-900/50">
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                <div class="w-16 h-16 blue-bg text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-map-marker-alt text-2xl"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-2 text-white">موقعنا</h4>
-                <p class="text-slate-400">المملكة العربية السعودية، الرياض<br>حي الياسمين</p>
+                <h4 class="text-xl font-bold mb-2 text-white">Location</h4>
+                <p class="text-slate-400">Riyadh, Saudi Arabia<br>Al Yasmin District</p>
             </div>
-
-            <div class="p-8 rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 blue-bg text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-900/50">
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                <div class="w-16 h-16 blue-bg text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-phone-alt text-2xl"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-2 text-white">رقم التواصل</h4>
-                <p class="text-slate-400 font-semibold" dir="ltr">+966 50 000 0000</p>
-                <p class="text-slate-400 font-semibold" dir="ltr">+966 11 000 0000</p>
+                <h4 class="text-xl font-bold mb-2 text-white">Phone</h4>
+                <p class="text-slate-400">+966 50 000 0000</p>
             </div>
-
-            <div class="p-8 rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 blue-bg text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-900/50">
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                <div class="w-16 h-16 blue-bg text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-envelope text-2xl"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-2 text-white">البريد الإلكتروني</h4>
+                <h4 class="text-xl font-bold mb-2 text-white">Email</h4>
                 <p class="text-slate-400">info@gtschool.edu.sa</p>
-                <p class="text-slate-400">jobs@gtschool.edu.sa</p>
             </div>
         </div>
     </div>
 </section>
+
     <footer class="py-6 bg-black text-white/50 text-center text-xs">
-        &copy; 2026 تم التطوير بواسطة Om Zone Executive System | جميع الحقوق محفوظة
+        &copy; 2026 Developed by Om Zone Executive System | All Rights Reserved
     </footer>
 
     <script>
         function showSection(sectionId) {
-            // 1. إخفاء جميع الأقسام
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
                 section.classList.remove('active');
             });
-
-            // 2. إظهار القسم المطلوب
             const activeSection = document.getElementById(sectionId);
             if(activeSection) {
                 activeSection.classList.add('active');
             }
-
-            // 3. الصعود لأعلى الصفحة
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // 4. تحديث شكل الروابط
             const links = document.querySelectorAll('.nav-link');
             links.forEach(link => {
                 link.classList.remove('active-link');
@@ -461,7 +371,20 @@
                 }
             });
         }
-    </script>
 
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content-item').forEach(item => {
+                item.classList.add('hidden');
+            });
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+                btn.classList.add('bg-white', 'text-slate-600', 'border-transparent');
+            });
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+            activeBtn.classList.remove('bg-white', 'text-slate-600', 'border-transparent');
+        }
+    </script>
 </body>
 </html>
