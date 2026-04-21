@@ -105,31 +105,84 @@
         </div>
     </section>
 
-    <section id="academics" class="py-20 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">البرامج <span class="blue-text">الأكاديمية</span></h2>
+   <section id="academics" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">البرامج الأكاديمية</h2>
+        
+        <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active fw-bold px-4" data-bs-toggle="pill" data-bs-target="#tab1">LKG/UKG</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link fw-bold px-4" data-bs-toggle="pill" data-bs-target="#tab2">الصف الأول - الثالث</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link fw-bold px-4" data-bs-toggle="pill" data-bs-target="#tab3">الصف الرابع - الخامس</button>
+            </li>
+        </ul>
+
+        <div class="tab-content bg-white p-4 p-md-5 rounded shadow-sm border-top border-4 border-primary">
             
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-blue-600">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4 text-2xl">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">برنامج التأسيس الإبداعي (LKG/UKG)</h3>
-                        <p class="text-slate-600 mb-6 leading-relaxed">نركز في هذه المرحلة على التعلم من خلال اللعب والاكتشاف. نهدف إلى تنمية مهارات الطفل الحركية والاجتماعية، مع تأسيس قوي بأساليب تفاعلية.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> تنمية المهارات اللغوية والذكاء العاطفي.</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> بيئة تعليمية مرحة وآمنة.</li>
+            <div class="tab-pane fade show active" id="tab1">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-md-end">
+                        <div class="academy-icon mb-3"><i class="fas fa-palette fa-3x" style="color: var(--accent-color);"></i></div>
+                        <h3 class="fw-bold mb-3">برنامج التأسيس الإبداعي</h3>
+                        <p class="lead">نركز في هذه المرحلة على التعلم من خلال اللعب والاكتشاف. نهدف إلى تنمية مهارات الطفل الحركية والاجتماعية، مع تأسيس قوي في اللغة العربية والإنجليزية ومبادئ الحساب بأساليب تفاعلية.</p>
+                        <ul class="academy-list list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> تنمية المهارات اللغوية والذكاء العاطفي.</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> بيئة تعليمية مرحة وآمنة.</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> أنشطة ترفيهية ورياضية يومية.</li>
                         </ul>
-                        <button onclick="showSection('apply')" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold">سجل الآن</button>
+                        <a href="#admissions" class="btn btn-register-small">سجل الآن في هذا البرنامج</a>
                     </div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="Kindergarten">
+                    <div class="col-md-4 mt-4 mt-md-0 text-center">
+                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow" alt="Kindergarten">
                     </div>
                 </div>
             </div>
+
+            <div class="tab-pane fade" id="tab2">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-md-end">
+                        <div class="academy-icon mb-3"><i class="fas fa-book-open fa-3x" style="color: var(--accent-color);"></i></div>
+                        <h3 class="fw-bold mb-3">مرحلة البناء المعرفي</h3>
+                        <p class="lead">نضع حجر الأساس للتميز الدراسي عبر منهج متكامل يركز على القراءة، الكتابة، والرياضيات. نستخدم تقنيات التعليم النشط لتعزيز الفضول العلمي لدى الطلاب.</p>
+                        <ul class="academy-list list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> منهج لغوي مكثف (عربي/إنجليزي).</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> مبادئ العلوم والحساب الذهني.</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> استخدام الوسائل التقنية في التعليم.</li>
+                        </ul>
+                        <a href="#admissions" class="btn btn-register-small">سجل الآن في هذا البرنامج</a>
+                    </div>
+                    <div class="col-md-4 mt-4 mt-md-0 text-center">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow" alt="Primary School">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab3">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-md-end">
+                        <div class="academy-icon mb-3"><i class="fas fa-microscope fa-3x" style="color: var(--accent-color);"></i></div>
+                        <h3 class="fw-bold mb-3">مرحلة التمكين والبحث العلمي</h3>
+                        <p class="lead">ننتقل بالطلاب من مرحلة التلقي إلى مرحلة البحث والتحليل. يتم تشجيع الطلاب على تنفيذ المشاريع العلمية، العمل الجماعي، وحل المشكلات المعقدة.</p>
+                        <ul class="academy-list list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> تطوير مهارات البحث العلمي والعرض التقديمي.</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> تعزيز القيم القيادية والاعتماد على النفس.</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> مسابقات أكاديمية وأنشطة تقنية متقدمة.</li>
+                        </ul>
+                        <a href="#admissions" class="btn btn-register-small">سجل الآن في هذا البرنامج</a>
+                    </div>
+                    <div class="col-md-4 mt-4 mt-md-0 text-center">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow" alt="Advanced Primary">
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="apply" class="py-20 bg-white">
         <div class="container mx-auto px-6">
