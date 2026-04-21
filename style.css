@@ -65,17 +65,18 @@ header {
 /* قسم الـ Hero */
 .hero {
     height: 70vh;
-    /* تدرج أزرق شفاف ليظهر النص الأسود بوضوح */
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    /* غيرنا الـ 0.7 إلى 0.3 عشان الصورة تظهر بوضوح أكتر */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
                 url('https://i.postimg.cc/pdLz0MyP/OIP-(7).jpg'); 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* لضمان عدم تكرار الصورة */
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--text-main);
+    /* لو خليت الطبقة غامقة (سودة)، يفضل تخلي النص أبيض عشان يبان */
+    color: white; 
 }
 .hero-content h1 {
     font-size: 3rem;
